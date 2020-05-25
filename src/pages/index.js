@@ -76,9 +76,13 @@ const Home = () => (
       `}
     />
 
-    <Helmet>
-      <title>Glen Winters</title>
-    </Helmet>
+    <Helmet
+      htmlAttributes={{ lang: 'en' }}
+      meta={[
+        { name: 'description', content: 'Personal website of Glen Winters' },
+      ]}
+      title="Glen Winters"
+    />
 
     <Container>
       <Portrait alt="Photo of Glen" src={portrait} />

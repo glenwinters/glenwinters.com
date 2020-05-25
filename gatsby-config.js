@@ -11,6 +11,7 @@ const targetAddress = new URL(
 module.exports = {
   plugins: [
     'gatsby-plugin-emotion',
+    'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-plugin-google-fonts',
       options: {

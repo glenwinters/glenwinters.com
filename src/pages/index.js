@@ -1,6 +1,7 @@
 import React from 'react';
 import { css, Global } from '@emotion/core';
 import styled from '@emotion/styled';
+import { Helmet } from 'react-helmet';
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 
 import portrait from './portrait.jpg';
@@ -74,6 +75,10 @@ const Home = () => (
         }
       `}
     />
+
+    <Helmet>
+      <title>Glen Winters</title>
+    </Helmet>
 
     <Container>
       <Portrait alt="Photo of Glen" src={portrait} />

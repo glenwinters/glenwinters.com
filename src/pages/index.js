@@ -76,7 +76,7 @@ const Home = () => (
     />
 
     <Container>
-      <Portrait src={portrait} />
+      <Portrait alt="Photo of Glen" src={portrait} />
       <Title>Hello, I'm Glen Winters.</Title>
       <Subtitle>Platform Engineer</Subtitle>
       <IconRow>

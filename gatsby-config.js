@@ -28,6 +28,7 @@ module.exports = {
         hostname: targetAddress.hostname,
         acl: null,
         params: {},
+        verbose: true
       },
     },
     {

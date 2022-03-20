@@ -87,7 +87,7 @@ const Home = () => (
     <Container>
       <Portrait alt="Photo of Glen" src={portrait} />
       <Title>Hello, I'm Glen Winters.</Title>
-      <Subtitle>Platform Engineer</Subtitle>
+      <Subtitle>Site Reliability Engineer</Subtitle>
       <IconRow>
         <a href={githubURL} target="_blank" rel="noreferrer">
           <GitHubIcon size="2.5em" />

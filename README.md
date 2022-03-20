@@ -4,6 +4,23 @@ This is the frontend for my personal website. It's built with [Gatsby][1].
 
 [1]: https://www.gatsbyjs.org/
 
+## Development
+
+Requirements:
+* Node.js (LTS)
+
+1. Install dependencies
+    ```
+    npm install
+    ```
+
+2. Start the local server
+    ```
+    npm start
+    ```
+
+3. View the site locally in your browser at `localhost:8000`
+
 ## Deployment
 
 ```

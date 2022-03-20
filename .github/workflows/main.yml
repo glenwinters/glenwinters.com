@@ -9,6 +9,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    # Needed for GitHub OIDC
+    permissions:
+      id-token: write
+      contents: read
 
     steps:
       - uses: actions/checkout@v3
@@ -23,3 +27,9 @@ jobs:
             ${{ runner.os }}-node-
       - run: npm ci
       - run: npm run build
+      - uses: aws-actions/configure-aws-credentials@v1
+        with:
+          role-to-assume: arn:aws:iam::669733824723:role/github-repos
+          aws-region: us-east-1
+      # Test creds
+      - run: aws sts get-caller-identity

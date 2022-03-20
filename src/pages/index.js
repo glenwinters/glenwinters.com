@@ -1,5 +1,5 @@
 import React from 'react';
-import { css, Global } from '@emotion/core';
+import { css, Global } from '@emotion/react';
 import styled from '@emotion/styled';
 import { Helmet } from 'react-helmet';
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';

@@ -50,6 +50,7 @@ jobs:
         with:
           role-to-assume: arn:aws:iam::669733824723:role/github-repos
           aws-region: us-east-1
+      - run: aws s3 ls
       - run: npm run deploy
         env:
           TARGET_BUCKET_NAME: staging.glenwinters.com

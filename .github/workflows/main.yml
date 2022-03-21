@@ -43,6 +43,7 @@ jobs:
         id: restore-build
         with:
           path: ./*
+          key: ${{ github.sha }}
       - uses: aws-actions/configure-aws-credentials@v1
         with:
           role-to-assume: arn:aws:iam::669733824723:role/github-repos

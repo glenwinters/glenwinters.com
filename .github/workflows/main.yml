@@ -39,13 +39,10 @@ jobs:
       contents: read
 
     steps:
-      - run: ls
       - uses: actions/cache@v2
         id: restore-build
         with:
           path: ./*
-          key: ${{ github.sha }}
-      - run: ls
       - uses: aws-actions/configure-aws-credentials@v1
         with:
           role-to-assume: arn:aws:iam::669733824723:role/github-repos

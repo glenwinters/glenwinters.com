@@ -48,3 +48,7 @@ To deploy to the staging environment, use the following env var values:
 TARGET_BUCKET_NAME=staging.glenwinters.com
 TARGET_ADDRESS=https://staging.glenwinters.com
 ```
+
+## CI
+
+On pull request commits, it builds and deploys to staging. On commits to `main`, it builds and deploys to production. In both cases, it creates a CloudFront invalidation to bust the cache.

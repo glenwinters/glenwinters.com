@@ -26,7 +26,6 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
       - run: npm ci
-      - run: npm run build
       - uses: aws-actions/configure-aws-credentials@v1
         with:
           role-to-assume: arn:aws:iam::669733824723:role/github-repos
@@ -36,4 +35,4 @@ jobs:
           TARGET_BUCKET_NAME: staging.glenwinters.com
           TARGET_ADDRESS: https://staging.glenwinters.com
       - run: npm run deploy
-        if: github.ref == 'refs/heads/integration' && github.event_name == 'push'
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'

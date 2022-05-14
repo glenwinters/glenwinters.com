@@ -7,24 +7,28 @@ This is the frontend for my personal website. It's built with [Gatsby][1].
 ## Development
 
 Requirements:
-* Node.js (LTS)
+
+- Node.js (LTS)
 
 1. Install dependencies
-    ```
-    npm install
-    ```
+
+   ```
+   npm install
+   ```
 
 2. Start the local server
-    ```
-    npm start
-    ```
+
+   ```
+   npm start
+   ```
 
 3. View the site locally in your browser at `localhost:8000`
 
 ## Deployment
 
 Requirements:
-* AWS profile `personal` that has access to the target S3 bucket
+
+- AWS profile `personal` that has access to the target S3 bucket
 
 ```
 TARGET_BUCKET_NAME=glenwinters.com TARGET_ADDRESS=https://glenwinters.com npm run build

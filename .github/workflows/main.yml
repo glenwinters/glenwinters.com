@@ -31,5 +31,9 @@ jobs:
         with:
           role-to-assume: arn:aws:iam::669733824723:role/github-repos
           aws-region: us-east-1
-      # Test creds
-      - run: aws sts get-caller-identity
+      - run: npm run build
+        env:
+          TARGET_BUCKET_NAME: staging.glenwinters.com
+          TARGET_ADDRESS: https://staging.glenwinters.com
+      - run: npm run deploy
+        if: github.ref == 'refs/heads/integration' && github.event_name == 'push'

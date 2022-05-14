@@ -59,7 +59,7 @@ const LinkedInIcon = styled(AiFillLinkedin)`
   }
 `;
 
-const Home = () => (
+const App = () => (
   <>
     <Global
       styles={css`
@@ -100,4 +100,4 @@ const Home = () => (
   </>
 );
 
-export default Home;
+export default App;

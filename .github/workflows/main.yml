@@ -30,9 +30,24 @@ jobs:
         with:
           role-to-assume: arn:aws:iam::669733824723:role/github-repos
           aws-region: us-east-1
-      - run: npm run build
+      - name: Build for staging
+        run: npm run build
         env:
           TARGET_BUCKET_NAME: staging.glenwinters.com
           TARGET_ADDRESS: https://staging.glenwinters.com
-      - run: npm run deploy
+      - name: Deploy to staging
+        run: npm run deploy
+      - name: Invalidate Cloudfront cache for staging
+        run: aws cloudfront create-invalidation --distribution-id E3SRPN0NPRAHUF --path "/*"
+      - name: Build for production (main only)
+        run: npm run build
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        env:
+          TARGET_BUCKET_NAME: staging.glenwinters.com
+          TARGET_ADDRESS: https://staging.glenwinters.com
+      - name: Deploy to production (main only)
+        run: npm run deploy
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+      - name: Invalidate Cloudfront cache for production (main only)
+        run: aws cloudfront create-invalidation --distribution-id E1YVFS469MBOAQ --path "/*"
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'

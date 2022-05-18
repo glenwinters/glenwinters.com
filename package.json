@@ -15,16 +15,16 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
-    "@emotion/react": "^11.8.2",
+    "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
-    "gatsby": "^4.14.0",
+    "gatsby": "^4.14.1",
     "gatsby-plugin-emotion": "^7.14.0",
     "gatsby-plugin-google-analytics": "^4.14.0",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-react-helmet": "^5.14.0",
     "gatsby-plugin-s3": "^0.3.8",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
     "react-helmet": "^6.1.0",
     "react-icons": "^4.3.1"
   },

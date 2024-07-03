@@ -1,54 +1,36 @@
-# glenwinters.com
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-This is the frontend for my personal website. It's built with [Gatsby][1].
+## Getting Started
 
-[1]: https://www.gatsbyjs.org/
+First, run the development server:
 
-## Development
-
-Requirements:
-
-- Node.js (LTS)
-
-1. Install dependencies
-
-   ```
-   npm install
-   ```
-
-2. Start the local server
-
-   ```
-   npm start
-   ```
-
-3. View the site locally in your browser at `localhost:8000`
-
-## Deployment
-
-Requirements:
-
-- AWS profile `personal` that has access to the target S3 bucket
-
-```
-TARGET_BUCKET_NAME=glenwinters.com TARGET_ADDRESS=https://glenwinters.com npm run build
-AWS_PROFILE=personal npm run deploy
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-The gatsby plugin will ask you to confirm that you're deploying to the correct
-bucket and region. Accept and it will push the new build to the S3 bucket.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-[gatsby-plugin-s3 docs](https://www.gatsbyjs.com/plugins/gatsby-plugin-s3/)
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-### Staging
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-To deploy to the staging environment, use the following env var values:
+## Learn More
 
-```
-TARGET_BUCKET_NAME=staging.glenwinters.com
-TARGET_ADDRESS=https://staging.glenwinters.com
-```
+To learn more about Next.js, take a look at the following resources:
 
-## CI
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-On pull request commits, it builds and deploys to staging. On commits to `main`, it builds and deploys to production. In both cases, it creates a CloudFront invalidation to bust the cache.
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
